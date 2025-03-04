@@ -1,0 +1,25 @@
+**Install kustomizetion**
+```
+curl -s "https://raw.githubusercontent.com/kubernetes-sigs/kustomize/master/hack/install_kustomize.sh"  | bash
+mv kustomize /usr/local/bin/
+```
+**add bash-completion for kustomize**
+```
+yum install bash-completion
+kustomize completion bash > /etc/bash_completion.d/kustomize
+# out and access again
+```
+**architech of kustomization**
+
+![image](https://github.com/user-attachments/assets/113b79c3-8a78-4910-b1cd-03b57b9396d3)
+
+**Create kustomize file**
+```
+mkdir -p resouce/base
+cd resouce/base
+kustomize init  # create file kustomization.yaml defaul
+cat kustomization.yaml 
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+```
+
