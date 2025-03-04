@@ -1,10 +1,10 @@
-### https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/
-**Add cert for policy** <\n>
-*vi /etc/profile* <\n>
-*source /etc/profile*
-*add cert*
-*vi /etc/pki/ca-trust/source/anchors/cert.crt*
-*update-ca-trust*
+## https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/
+**Add cert for policy**
+- vi /etc/profile
+- source /etc/profile
+- add cert
+- vi /etc/pki/ca-trust/source/anchors/cert.crt
+- update-ca-trust
 ##############################################################################################
 # Add host
 ```
