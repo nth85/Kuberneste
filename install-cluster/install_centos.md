@@ -5,8 +5,7 @@
 - add cert
 - vi /etc/pki/ca-trust/source/anchors/cert.crt
 - update-ca-trust
-##############################################################################################
-# Add host
+**Add host**
 ```
 cat >> /etc/hosts<< EOF
 192.168.56.120 masterk8s-01
@@ -14,27 +13,28 @@ cat >> /etc/hosts<< EOF
 EOF
 ```
 ```
-vi /etc/resolv.conf
+cat >> /etc/resolv.conf<< EOF
 nameserver 203.241.132.34
 nameserver 203.241.135.135
+EOF
 ```
-# disable swap
+**disable swap**
 ```
 sudo sed -i '/ swap / s/^\(.*\)$/#\1/g' /etc/fstab 
 sudo swapoff -a 
 ```
-============================
-# sysctl params required by setup, params persist across reboots
+**sysctl params required by setup, params persist across reboots**
+```
 cat <<EOF | sudo tee /etc/sysctl.conf
 net.bridge.bridge-nf-call-iptables  = 1
 net.bridge.bridge-nf-call-ip6tables = 1
 net.ipv4.ip_forward                 = 1
 vm.swappiness=0
 EOF
-# Apply sysctl params without reboot
-sudo sysctl --system
-
-# Apply sysctl params without reboot
+```
+**Apply sysctl params without reboot**
+`sudo sysctl --system`
+**Apply sysctl params without reboot**
 sudo sysctl --system
 ## verify 
 lsmod | grep br_netfilter
