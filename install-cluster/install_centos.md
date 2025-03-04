@@ -1,6 +1,6 @@
 ### https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/
-# Add cert for policy
-*vi /etc/profile*
+**Add cert for policy**
+*vi /etc/profile* <n>
 *source /etc/profile*
 *add cert*
 *vi /etc/pki/ca-trust/source/anchors/cert.crt*
