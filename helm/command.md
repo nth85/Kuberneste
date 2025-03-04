@@ -13,3 +13,31 @@ helm repo remove elastic
 ```
 helm template --vadi... --output-dir . -f values.yaml --namespace logstash logging bitnami/logstash
 ```
+**helm install**
+```
+helm install happy-panda bitnami/wordpress
+helm install -f values.yaml bitnami/wordpress --generate-name
+```
+- status
+``` 
+helm status happy-panda
+```
+- check values befor install
+```
+helm show values bitnami/wordpress
+```
+- helm update
+```
+helm upgrade -f panda.yaml happy-panda bitnami/wordpress
+helm get values happy-panda
+helm rollback happy-panda 1
+```
+**helm uninstall**
+```
+helm uninstall happy-panda
+helm list
+helm list --all
+
+```
+
+
