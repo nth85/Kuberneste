@@ -1,26 +1,28 @@
 ### https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/
-## Add cert for policy
-*vi /etc/profile
-...
-source /etc/profile
-## add cert
-vi /etc/pki/ca-trust/source/anchors/cert.crt
-...
-update-ca-trust*
+# Add cert for policy
+*vi /etc/profile*
+*source /etc/profile*
+*add cert*
+*vi /etc/pki/ca-trust/source/anchors/cert.crt*
+*update-ca-trust*
 ##############################################################################################
-## Add host
+# Add host
 ```
 cat >> /etc/hosts<< EOF
 192.168.56.120 masterk8s-01
 192.168.56.121 datak8s-01
 EOF
-##
+```
+```
 vi /etc/resolv.conf
 nameserver 203.241.132.34
 nameserver 203.241.135.135
-## disable swap
+```
+# disable swap
+```
 sudo sed -i '/ swap / s/^\(.*\)$/#\1/g' /etc/fstab 
 sudo swapoff -a 
+```
 ============================
 # sysctl params required by setup, params persist across reboots
 cat <<EOF | sudo tee /etc/sysctl.conf
