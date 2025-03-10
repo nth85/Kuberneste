@@ -57,4 +57,17 @@ sudo ./install.sh
 **Access domain**
 http://harbor.trhuy.com
 
+# Setup for Harbor
+**1. Login to**
+```
+Account admin: admin/Abc12345
+```
+*Create user: Chọn Administration/Users - thanh navidation bên trái.
+*Create user: Demo/Abc@123
+
+*Create Project: Chọn Projects - thanh navidation bên trái.
+Create Project: DemoProject - private
+
+
+
 
