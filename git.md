@@ -36,7 +36,13 @@ git remote add origin https://github.com/nth85/Kuberneste.git
 ```
 git push origin master --force
 ```
-
+- pull my folder on PC with github repository
+```
+D:
+cd Kuberneste
+git pull origin main
+ex: PS D:\Kuberneste> git pull origin main
+```
 **Set authencation for user**
 ```
 git config –global user.name “Ten_cua_ban”.
