@@ -13,6 +13,10 @@ git --version
 PS C:\Users\NTH> D:
 PS D:\> ls
 ```
-
+- Clone repo from GIT to PC local
+```
+cd folder/myfolder
+https://github.com/nth85/Kuberneste.git
+```
 
 hxxxpxxxx22@
