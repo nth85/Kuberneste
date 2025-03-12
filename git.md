@@ -2,7 +2,9 @@
 - Using winget tool install Powershell.
 ```
 winget install --id Git.Git -e --source winget
-#The current source code release is version 2.48.1. 
+#The current source code release is version 2.48.1.
+# in Centos
+yum install git -y
 ```
 **On window open Powershell**
 ```
