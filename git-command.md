@@ -1,3 +1,33 @@
+**Commnad git**
+- git base
+```
+git init
+git add . # --all
+git commit -m "change detail discretion"
+git push origin master # --force
+git remote add origin https://github.com/nth85/Kuberneste.git
+
+git pull origin master
+
+git branch
+git branch opensearch
+git checkout opensearch # traffer to new branch opensearch
+git checkout -b opensearch # create and traffer
+
+git checkout main
+git merge opensearch
+
+git branch -d opensearch #delete branch opensearch
+```
+- git config:
+```
+vi .git/config
+[remote "origin"]
+#        url = https://github.com/nth85/MY_DOCUMENT.git
+         url = https://token_key_on_git@github.com/nth85/MY_DOCUMENT.git
+        fetch = +refs/heads/*:refs/remotes/origin/*
+```
+
 **Install GI**
 - Using winget tool install Powershell.
 ```
@@ -47,6 +77,11 @@ ex: PS D:\Kuberneste> git pull origin main
 ```
 git config –global user.name “Ten_cua_ban”.
 git config –global user.email “email_cua_ban”.
+```
+- setup config .git
+```
+vi .git/config
+url = https://user:pass@git.example.com/user/repository.git
 ```
 
 hxxxpxxxx22@
