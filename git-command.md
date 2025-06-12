@@ -83,5 +83,3 @@ git config –global user.email “email_cua_ban”.
 vi .git/config
 url = https://user:pass@git.example.com/user/repository.git
 ```
-
-hxxxpxxxx22@
