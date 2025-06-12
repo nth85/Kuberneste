@@ -1,3 +1,5 @@
+https://viblo.asia/p/redis-co-ban-57rVRq5OR4bP
+
 | Command | content |
 | ---- | ------- |
 | DEL key	| Xóa key nếu nó tồn tại |
