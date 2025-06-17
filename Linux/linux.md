@@ -6,6 +6,7 @@ nslookup 24h.com.vn
 ```
 uname -a
 uptime
+stat /etc/rsyslog.conf #check date modify, chang, access
 top /htop
 df -h
 du -sh *
