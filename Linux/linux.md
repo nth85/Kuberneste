@@ -2,6 +2,33 @@
 ```
 nslookup 24h.com.vn
 ```
+**Base linux**
+```
+uname -a
+uptime
+top /htop
+df -h
+du -sh *
+free -h
+ls -al
+find . -name "foo"
+grep -r "bar"
+
+ip a
+ss -tuln
+cur -I URL
+telnet ip port
+
+chmod +x file
+chown user:user file
+
+tar -xzvf file.tar.gz
+tar -tf file.tar.gz # chec detail file
+tar -zcf newnamefile.tar.gz file1 file2 # zip file
+
+scp file user@host:/path
+
+```
 **Create repo local on Redhat8**
 ```
 vi /etc/yum.repo/local.repo
@@ -225,6 +252,15 @@ netstat -npa | grep -i etcd | grep -i 2379 | wc -l
 ```
 timeout -s 9 10 top
 timelimit -t10 top
+```
+
+**Ansible**
+```
+ansible all -m ping -i inventories/hosts
+ansible-playbook -i inventories/hosts playbook -k
+
+ll -alh
+cd .ansible
 ```
 
 
