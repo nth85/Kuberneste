@@ -14,6 +14,8 @@ free -h
 ls -al
 find . -name "foo"
 grep -r "bar"
+cat /etc/redis.conf | grep -v "#"
+netstat -npa | grep -i etcd | grep -i 2379 | wc -l # grep number line
 
 ip a
 ss -tuln
@@ -28,6 +30,22 @@ tar -tf file.tar.gz # chec detail file
 tar -zcf newnamefile.tar.gz file1 file2 # zip file
 
 scp file user@host:/path
+cp -R *./
+
+head /proc/meminfo
+
+ss -tmnw -a 1 9200
+ss tmnw | grep d | cut -d'd' -f2 | cut -d')' -f1
+ss -tmnw | grep -A 1 9200 | grep d | cut -d'd' -f2 | cut -d')' -f1 | awk -v hostname="$HOSTNAME" '{sum +=$1} END {print hostname ":", sum;}'
+
+timedatectl
+timedatectl list-timezones
+timedatectl set-timezone Asia/Ho_chi_minh
+
+hostname
+hostnamectl
+hostnamectl set-hostname "name"
+exec bash
 
 ```
 **Create repo local on Redhat8**
@@ -52,6 +70,37 @@ mount /dev/sr0 /mnt/cdrom
 yum clean all
 yum repolist
 ```
+**vi**
+```
+D and shift + G #xoa tu vi tri con chuot toi het
+Shift + G
+G G
+yy # copy 1 line
+5yy # copy 5 line
+P # paste
+I A # overwrite
+:nohl # xoas hghligh trong vi
+:set nu # hien thi dong so
+v # chon dong
+Shift + ? # bo # va them # dau dong
+Shift [ or ] # lui thut dau dong
+```
+**rpm**
+```
+rpm -zxvf package
+rpm -qa | grep package
+rpm -e package # remove package
+rpm -ivh package.rpm
+```
+**yum**
+```
+yum repolist
+yum clean all
+sudo yum localinstall *.rpm
+
+yum install --downloadonly --downloaddir=/tmp bc<package> #install download package from server internet then instal for server local
+```
+
 **curl noproxy**
 ``` 
 curl --noproxy '*' https://dantri.com.vn
@@ -95,6 +144,17 @@ sudo chown -R cmpprod:cmpprod /data
 ## verify disk mounted
 df -h 
 ```
+**Unmount adn remove mount disk**
+```
+sudo su -
+umount /data
+lvremove /dev/VG00/LV_data
+vgreduce VG00 /dev/sdb1
+vgremove VG00
+pvremove /dev/sdb1
+---remove inside fstabfike
+vi /etc/sftab
+```
 **Create "cmpprod" User**
 ```
 groupadd -g 1001 cmpprod
@@ -110,6 +170,7 @@ passwd cmpprod
 systemctl stop firewalld
 systemctl disable firewalld
 sed -i "s/^SELINUX=.*/SELINUX=disabled/" /etc/sysconfig/selinux
+sestates 
 ```
 **rsyslog**
 - into config of service HAproxy
