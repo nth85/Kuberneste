@@ -1,0 +1,10 @@
+#check vm on the proxmox
+qm list
+#
+qm config 101 | grep net0
+net0: e1000=BC:24:11:76:CF:F6,bridge=vmbr0,firewall=1
+#check ip
+ip neigh | grep -i "BC:24:11:76:CF:F6"
+
+ip neigh | grep -i "BC:24:11:76:CF:F6"
+
