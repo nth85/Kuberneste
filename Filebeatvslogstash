@@ -1,0 +1,114 @@
+filebeat: filebeat.yaml
+filebeat.inputs:
+  - type: log
+    paths:
+      - /var/log/messages
+
+processors:
+  - add_host_metadata: ~
+
+output.logstash:
+  hosts: ["<IP-Logstash>:5044"]
+###########
+filebeat.inputs:
+  - type: log
+    enabled: true
+    paths:
+      - /var/log/messages
+
+# Thêm metadata host vào event
+processors:
+  - add_host_metadata: ~
+  - add_fields:
+      target: ''
+      fields:
+        host_ip: "${HOST_IP}"   # bạn có thể pass biến môi trường khi start
+
+output.logstash:
+  hosts: ["<IP-logstash>:5044"]
+##########
+#logstash
+input {
+  beats {
+    port => 5044
+  }
+}
+
+filter {
+  # Tách timestamp, hostname trong syslog *nếu có*
+  grok {
+    match => { "message" => "^%{SYSLOGTIMESTAMP:sys_timestamp} %{HOSTNAME:syslog_hostname} %{GREEDYDATA:syslog_message}$" }
+  }
+
+  # Hostname + IP của server gửi log
+  mutate {
+    add_field => {
+      "server_hostname" => "%{[host][hostname]}"
+      "server_ip"       => "%{[host][ip]}"
+    }
+  }
+
+  # Đồng bộ timestamp
+  date {
+    match => ["sys_timestamp", "MMM d HH:mm:ss", "MMM dd HH:mm:ss"]
+    target => "@timestamp"
+  }
+}
+
+output {
+  elasticsearch {
+    hosts => ["http://<IP-Elasticsearch>:9200"]
+    index => "syslog-%{+YYYY.MM.dd}"
+  }
+  stdout { codec => rubydebug }
+}
+###############
+kibana
+
+{
+  "log_timestamp": "Jan 23 10:20:30",
+  "log_hostname": "server01",
+  "log_ip": "192.168.1.55",
+  "server_name": "vm01"
+}
+###############
+logstaah
+
+input {
+  beats { port => 5044 }
+}
+
+filter {
+  # Parse timestamp + hostname + process + message IP
+  grok {
+    match => {
+      "message" => [
+        "^%{MONTH} %{MONTHDAY} %{TIME} %{HOSTNAME:log_hostname} %{DATA:process}\[%{NUMBER:pid}\]: %{GREEDYDATA:msg}$",
+        "%{IP:log_ip}"           # bắt IP trong msg
+      ]
+    }
+  }
+
+  # Lấy timestamp đầy đủ
+  date {
+    match => ["timestamp", "MMM dd HH:mm:ss", "MMM  d HH:mm:ss"]
+    target => "@timestamp"
+  }
+
+  # Tách tất cả IP trong log (nếu có nhiều IP)
+  grok {
+    match => { "msg" => "%{IP:src_ip}" }
+  }
+
+  mutate {
+    add_field => { "server" => "%{[host][hostname]}" }
+  }
+}
+
+output {
+  elasticsearch {
+    hosts => ["http://<IP-Elastic>:9200"]
+    index => "syslog-%{+YYYY.MM.dd}"
+  }
+}
+
