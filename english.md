@@ -16,4 +16,8 @@ Hien tai hoan thanh | S + has/have been + V3 | vua xong, bao cao | Deployment ha
 Qua Khu Don | S + was/were + V3 | Su co xay ra | The server was restarted last night
 Tương lai đơn | S + will be + V3 | Kế hoạch | The system will be upgraded tonight
 
+is + V3  --> Trạng thái
+has been + V3 ---> Vua xong
+was + V3 ---> Đã xảy ra
+will be + V3 ---> sẽ làm
 
