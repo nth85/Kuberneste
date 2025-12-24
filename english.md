@@ -8,3 +8,12 @@ the system runs automatically | The deployment has been completed | the server c
 this job is completed | The issue has been fixed | this job was completed yesterday | We will deploy tonight
 Logs are stored in Elasticsearch | I have updated the config |
 
+## bảng câu bị động:
+Thì | Công thuc bị độn | Dùng khi nào | For example
+-- | -- | -- | --
+Hien tai don | S + is/are + V3 | Trang thai he thong, mo ta | the services is running, Logs are stored in S3
+Hien tai hoan thanh | S + has/have been + V3 | vua xong, bao cao | Deployment has been completed.
+Qua Khu Don | S + was/were + V3 | Su co xay ra | The server was restarted last night
+Tương lai đơn | S + will be + V3 | Kế hoạch | The system will be upgraded tonight
+
+
