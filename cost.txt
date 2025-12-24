@@ -1,0 +1,123 @@
+SMITH
+Lead Systems Engineer | System Design | Project Management
+Number CT: ooooo Email:   linkedin.com  | address: 
+SUMMARY
+------------------
+Innovative Lead Systems Engineer with over 6 years of experience in automation and system design. Proficient in Rockwell plaforms, with a strong project management backgroud and successful completion of global system design project.
+
+EXPERIENCE:
+---------------------------
+Lead Systems Engineer
+    SDSV
+- Directed a team of 5 engineers in designing and implementing control systems,
+- Led project design and commissioning for multinational clients,
+- Spearheaded the integration of new technologies into existing systems, reducing maintenance costs by 15%
+- Collaborated with project managers to redefine project scope, successfully delivering under budget by 10%
+- Established technical communication channels with clients, improving project approval times by 20%
+- Developed a monitoring system through Rockwell PlantPAx, enhancing system accuracy and reliability.
+Systems Engineer:
+- Designed and implemented control archeitecture, resulting in a 40% increase in system responsiveness.
+- Managed functional requirement sessions with clients, streamlining project requirements change response by 35%
+- Customized Rockwell software, enriching product offerings and increasing client database 12%
+- Orchestrated on-site system commissioning and testing, leading to successfull early project delivery.
+- conducted training for junior engineers, improving team output quality by 15%.
+Junior Systems Engineer:
+-Assisted in programming controller with Rockwell controllogix, enhancing client project's peak performance.
+- Optimized system configuration  testing protocols, increasing testing efficiency by 20%
+- Contributed to electrical control panel designs resuslting in reduced production times by 10%
+- Collaborated on cross-functional teams to iterate on system design, achieving a 100% deliverable success reate.
+
+- Maintained backup of server environments while creating failover policies and shared resources across WANs
+    - Administered virtualized server environments, setting up, monitoring, and maintaining alerts on host and VM status indicators.
+    - Configured and maintained UPS on critical infrastructure resulting in enhanced system stability
+    - Reduced cost by 20% through improved procurement and vendor negotiation.
+
+Senior Systems Engineer
+Archiected and deployed major upgrades across different IT environments, along with maintaining and managing existing setups.
+    - Drirected the setup, monitoring, and maintenance of alerts on data storage status indicators across WANs resulting in better data management.
+    - Ensured robust failover processes and alert mechnisms were in place for high uptime.
+    - Managed the migration of 10+ environments to Azure, enhancing the company's move towards cloud-native infrastructure
+ 
+EDUCATION
+-------------------------
+
+SKILLS: 
+System design, Project management, Technical documentation, Network architecture, Software integration
+TRAINING/COURSES:
+Teraform, AWS, Linux, MySQL, 
+PASSIONS:
+Automation and Control Systems: Passionate about advancing control systems and implementing automation technology
+Continuous Learning: An avid learner, I regularly enroll in cources and certifications to stay updated with the latest technologies in the field of Systems Engineering.
+Mentoring: I enjoy sharing my knowledge and helping budding engineers grow in their careers, conducting periodic technical workshops.
+Traveling: Enjoy exploring new cultures and gaining diverse perspectives through traval.
+
+Sen
+
+
+
+CONTACT
+
+SKILLS
+Technical:
+    VMware ESX
+    Virtualization
+    Troubleshooting
+Techniques:
+    System Administration
+    Disaster Recovery
+    Control System Design
+Tools and Software:
+    Java
+Languages:
+    English (Intermediate)
+
+EDUCATION:
+     University of Transport Ha Noi 2004-2009
+
+Certificate:
+    AWS
+    CKA
+
+Systens Enginer with 9+ years of experience improving network operations by implementing disaster recovery strategies and configuring security systems Key achievement: Developed a RESTful API with Python on top of SQLAlchemy, 
+
+Senior System Engineer
+RELEVANT WORK EXPERIENCE
+--------------------------
+SamSung SDSV, Ha Noi, VietNam
+Senior System Engineer, Cloud Engineer, Devops Engineer  2023 - Present
+    Intalling and operator Firewall Logging of Cloud SS System
+    Monitoring Services
+    Deployment services with GIT - Argocd- Harbor on K8S
+
+Mobifone Global:
+System Engineer, Network Engineer, Project Manager    9/2013 - 03/2023
+Network-Engineer 9/2013 - 10/2015
+    Analyzed network requirements and performed 15 backups daily, leading to a 40% improvement of the company's network performance
+    Configured, and managed 5 window servers and also fixed issues with Windows based software programs, increasing Polyhire's business operational efficiency by 85%
+    Developed original web pages and integrated 10 new systems into existing networks by resolving networking problems, which consolidated the security of the company's critical infrastructure for 8 months without hitches.
+    increased the performance and security of 10 company networks, and was awarded employee of the month in 2013
+
+    Data Center Operation
+    Optical transmision system
+
+System- Engineer 10/205 - 03/2000
+    Championed the implementation of 5 new data centers and server infrastructure for 10 international companies with over 120K employees achieved a 95% uptime for 2 years.
+    Implemented a centralized backup system across 5 locations that helped reduce backup time by 97% compared to previous solutions.
+    Designed custom software applications using Bash shell, Ansibel, which automated 10 manual processes and improved efficiency by 90%
+    Managed a 5-member technical support team that responded promptly to complanints from over 2K customers, successfully maintaining a high customer satifsfaction rating
+
+Computer Engineer: Computer Technician
+    Developedand implemented a new system that tracked the locaiton of 20 compalny vehicles using GPS, which reduced manual entry by over 95%
+    Assisted with technical support for software installation and configuration problems on Windown XP/7-11 systems via remote desktop connection, increasing staff efficiency by 60%
+    Suscceeded in writing scripts that automated data collection from 45 sources including Excel spreadsheets, SQL database, web services, helping ro reduce the time spent on manual data entry by ~ 90%.
+
+    Installed and configured new computer hardware, software, printers and networking equipment for 500 RW clients.
+    Fixed damaged hard drives using data recovery tools to salvage critical company information, increasing client satisfaction rating by 35%
+    Designed an automated system that tracked employee time cards, saving RW 22 hours per week in payroll processing.
+    Updated security patches on 300 company computers, preventing over 3K malware and virus attacks in 2011 alone.
+    Maintained an up-to-date inventory of 5K computer parts in the warehouse worth over $2M.
+
+PREVIOUS EXPERIENCE
+####################
+
+
